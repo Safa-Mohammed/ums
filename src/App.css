@@ -1,0 +1,10 @@
+.login-container {
+  background: linear-gradient(to right, #FEAF00, #fac553);
+}
+
+.sidebarContainer{
+  background-color: bisque;
+}
+.sidebarContainer .ps-sidebar-container .ps-menu-button:hover{
+  background-color: rgba(239, 155, 40,0.3) !important;
+}
