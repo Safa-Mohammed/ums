@@ -74,12 +74,6 @@ export default function Login() {
               {errors.password && <span className='text-danger'>{errors.password.message}</span>}
             </div>
 
-            <button type="submit" className="btn btn-warning w-100 text-white">
-              SIGN IN
-            </button>
-          </form>
-        </div>
-      </div>
     </div>
   );
 }
