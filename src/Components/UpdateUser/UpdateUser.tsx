@@ -48,7 +48,7 @@ export const UpdateUser = () => {
       } catch (error) {
         console.error("Error fetching user data:", error);
         toast.error("Failed to fetch user data");
-        navigate("/dashboard/user-list");
+        navigate("/dashboard/users-list");
       }
     };
 
@@ -69,7 +69,7 @@ export const UpdateUser = () => {
         },
       });
       toast.success("User updated successfully");
-      navigate("/dashboard/user-list");
+      navigate("/dashboard/users-list");
     } catch (error) {
       console.error("Error updating user:", error);
       toast.error("Failed to update user");

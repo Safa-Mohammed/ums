@@ -14,8 +14,7 @@ import UpdateUser from './Components/UpdateUser/UpdateUser'
  
 
 function App() {
-  //two object>>two layout
- const routes  =createBrowserRouter 
+  const routes  =createBrowserRouter 
 ([
 {
   path:'/',

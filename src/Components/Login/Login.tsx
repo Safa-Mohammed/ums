@@ -23,12 +23,12 @@ export default function Login() {
 
       const response = await axios.post('https://dummyjson.com/auth/login', data, {
         headers: {
-          'Content-Type': 'application/json'
-        }
+          'Content-Type': 'application/json',
+        },
       });
 
       if (response.data) {
-        localStorage.setItem("userToken", response?.data?.accessToken);
+        localStorage.setItem("userToken", response.data.accessToken);
         saveUserData();
         toast.success("You have successfully logged in");
         navigate('/dashboard');
@@ -46,7 +46,9 @@ export default function Login() {
           <div className="mb-4">
             <h3 className={styles.title}>User Management System</h3>
             <h4 className={`${styles.subTitle} text-center text-uppercase pt-3`}>Sign In</h4>
-            <h5 className={`${styles.desc} text-center`}>Enter your credentials to access your account</h5>
+            <h5 className={`${styles.desc} text-center`}>
+              Enter your credentials to access your account
+            </h5>
           </div>
 
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -59,7 +61,7 @@ export default function Login() {
                 placeholder="Enter your username"
                 {...register('username', { required: 'Username is required' })}
               />
-              {errors.username && <span className='text-danger'>{errors.username.message}</span>}
+              {errors.username && <span className="text-danger">{errors.username.message}</span>}
             </div>
 
             <div className="mb-3 text-start">
@@ -71,7 +73,7 @@ export default function Login() {
                 placeholder="Enter your password"
                 {...register('password', { required: 'Password is required' })}
               />
-              {errors.password && <span className='text-danger'>{errors.password.message}</span>}
+              {errors.password && <span className="text-danger">{errors.password.message}</span>}
             </div>
 
             <button type="submit" className="btn btn-warning w-100 text-white">
