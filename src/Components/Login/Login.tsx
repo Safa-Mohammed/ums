@@ -76,6 +76,11 @@ export default function Login() {
               {errors.password && <span className="text-danger">{errors.password.message}</span>}
             </div>
 
+            <button type="submit" className="btn btn-primary w-100">Login</button>
+          </form>
+
+        </div>
+      </div>
     </div>
   );
 }
